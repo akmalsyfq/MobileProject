@@ -153,9 +153,9 @@ class _ProductdetailsState extends State<Productdetails> {
         message: Text("Adding to cart"), title: Text("Progress..."));
     progressDialog.show();
     await Future.delayed(Duration(seconds: 1));
-    http.post(Uri.parse(MyConfig.server + "/bellcosa/php/add_cart.php"), body: {
+    http.post(Uri.parse("https://ppdkp.com/bellacosa/php/add_cart.php"), body: {
       "email": widget.user.email,
-      "product_id": widget.product.procode
+      "product_id": widget.product.procode.toString(),
     }).then((response) {
       if (response.body == "Failed") {
         Fluttertoast.showToast(
@@ -163,7 +163,8 @@ class _ProductdetailsState extends State<Productdetails> {
       } else {
         Fluttertoast.showToast(
             msg: "Success", toastLength: Toast.LENGTH_SHORT, fontSize: 16.0);
-        Navigator.pop(context);
+        print(response.body);
+        //Navigator.pop(context);
       }
     });
     progressDialog.dismiss();

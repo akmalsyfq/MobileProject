@@ -55,15 +55,15 @@ class _PaymentPageState extends State<PaymentPage> {
           height: screenHeight,
           width: screenWidth,
           child: WebView(
-            initialUrl: MyConfig.server +
-                '/bellacosa/php/payment_app.php?email=' +
-                widget.payment.email.toString() +
-                '&mobile=' +
-                widget.payment.phone.toString() +
-                '&name=' +
-                widget.payment.name.toString() +
-                '&amount=' +
-                widget.payment.amount.toString(),
+            initialUrl:
+                'https://ppdkp.com/bellacosa/php/payment_app.php?email=' +
+                    widget.payment.email.toString() +
+                    '&mobile=' +
+                    widget.payment.phone.toString() +
+                    '&name=' +
+                    widget.payment.name.toString() +
+                    '&amount=' +
+                    widget.payment.amount.toString(),
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               _controller.complete(webViewController);
