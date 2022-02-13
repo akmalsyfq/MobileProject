@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "ppdkpcom_akmal";
-$password = "pw9z*IxM9o.S";
+$username = "";
+$password = "";
 $dbname = "ppdkpcom_bellacosashopdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
