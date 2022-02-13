@@ -6,8 +6,8 @@ $mobile = $_GET['mobile'];
 $name = $_GET['name']; 
 $amount = $_GET['amount']; 
 
-$api_key = '79cc549d-57f0-4255-91d3-c01cfcb36a37';
-$collection_id = '7yf_wibf';
+$api_key = '';
+$collection_id = '';
 $host = 'https://billplz-staging.herokuapp.com/api/v3/bills';
 
 $data = array(
