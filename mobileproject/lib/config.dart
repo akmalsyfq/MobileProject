@@ -1,4 +1,4 @@
 class MyConfig {
-  static const String server = "https://ppdkp.com";
-  //static const String server = "https://192.168.0.167";
+  static const String server = "https://";
+  //static const String server = "https://";
 }
